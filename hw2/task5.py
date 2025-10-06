@@ -8,7 +8,7 @@ def limit_calls():
         def inner(*args, **kwargs):
             for i in range(3):
                 res = func(*args, **kwargs)
-                print(f"Вызов {i+1}: result = {res}")
+                print(f"Вызов {i+1}: args = {args}, kwargs = {kwargs}, result = {res}")
                 if i < 2:
                     time.sleep(2)
             return res
